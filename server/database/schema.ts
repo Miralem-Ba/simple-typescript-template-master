@@ -8,7 +8,6 @@ CREATE TABLE IF NOT EXISTS users (
     PRIMARY KEY (id)
 );
 `
-
 const USER_ROLE = `
 CREATE TABLE IF NOT EXISTS roles_permissions (
     id INT NOT NULL AUTO_INCREMENT,
@@ -17,7 +16,6 @@ CREATE TABLE IF NOT EXISTS roles_permissions (
     PRIMARY KEY (id)
 );
 `;
-
 const adminRoleQuery = `
     INSERT IGNORE INTO roles_permissions (rolename, deletAllPost)
     VALUES ('Admin', true);
