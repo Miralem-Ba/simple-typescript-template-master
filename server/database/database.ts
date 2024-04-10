@@ -9,7 +9,7 @@ export class Database {
   constructor() {
     this._pool = mariadb.createPool({
       database:  'minitwitter',
-      host: '127.0.0.1',
+      host: 'localhost',
       user:  'minitwitter',
       password:  'supersecret123',
       port:33061,
