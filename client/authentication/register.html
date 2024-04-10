@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="register.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+  </head>
+  <body class="bg-green-900">
+    <div class="justify-center flex items-center flex flex-col">
+      <h1 class="text-4xl font-bold text-white">Registrirung</h1>
+      
+      <div class="w-80 bg-white rounded-lg m-11 p-4 flex flex-col justify-around shadow-lg">
+        <form id="registrationForm" class="flex flex-col space-y-4">
+            <label for="username" class="text-green-700">Benutzername:</label>
+            <input type="text" id="username" required class="p-2 rounded border-2 border-black bg-white text-black">
+    
+            <label for="password" class="text-green-700">Passwort:</label>
+            <input type="password" id="password" required class="p-2 rounded border-2 border-black bg-white text-black">
+    
+            <label for="email" class="text-green-700">Email:</label>
+            <input type="email" id="email" required class="p-2 rounded border-2 border-black bg-white text-black">
+    
+            <button class="bg-green-500 text-white px-4 py-2 rounded w-auto" type="submit">Registrieren</button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded w-auto" id="loginNavigationButton">Zurück zu Login</button>
+        </form>
+      </div>
+    </div>   
+  </body>
+</html>
