@@ -8,10 +8,11 @@ export class Database {
   // Constructor
   constructor() {
     this._pool = mariadb.createPool({
-      database: process.env.DB_NAME || 'minitwitter',
-      host: process.env.DB_HOST || 'localhost',
-      user: process.env.DB_USER || 'minitwitter',
-      password: process.env.DB_PASSWORD || 'supersecret123',
+      database:  'minitwitter',
+      host: '127.0.0.1',
+      user:  'minitwitter',
+      password:  'supersecret123',
+      port:33061,
       connectionLimit: 5,
     })
     this.initializeDBSchema()

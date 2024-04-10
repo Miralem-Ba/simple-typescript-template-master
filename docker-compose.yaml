@@ -1,31 +1,15 @@
-version: '3.8'
+version: '3.1'
 
 services:
   mariadb:
-    image: mariadb:10.6.4-focal
-    command: '--default-authentication-plugin=mysql_native_password'
+    image: mariadb:latest
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: example # Bitte ersetze 'example' durch ein sicheres Passwort
+    ports:
+      - "33061:3306" # Der Port 33061 des Hosts wird auf den Port 3306 des Containers gemappt
     volumes:
-      - m223_project_mariadb:/var/lib/mysql
-    restart: always
-    environment:
-      - MYSQL_ROOT_PASSWORD=supersecret123
-      - MYSQL_DATABASE=minitwitter
-      - MYSQL_USER=minitwitter
-      - MYSQL_PASSWORD=supersecret123
-    ports:
-      - 3306:3306
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    depends_on:
-      - mariadb
-    restart: always
-    environment:
-      - PMA_HOST=mariadb
-      - PMA_PORT=3306
-      - MYSQL_ROOT_PASSWORD=supersecret123
-    ports:
-      - 9200:80
+      - mariadb_data:/var/lib/mysql # Persistentes Volume für die Datenbankdaten
 
 volumes:
-  m223_project_mariadb:
+  mariadb_data: # Definition des persistenten Volumes
