@@ -30,8 +30,6 @@ export class Permission {
                 return false;
               }
               
-            
-
         } else {
             return false;
         }
