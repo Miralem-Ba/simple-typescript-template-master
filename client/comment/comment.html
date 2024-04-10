@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="comment.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Typescript Starter</title>
+  </head>
+  <body class="bg-green-900">
+    <nav class="bg-white p-4 text-green-700 fixed w-full">
+        <div class="container mx-auto">
+            <h1 class="text-2xl font-bold">Your Feed</h1>
+        </div>
+    </nav>
+    <div class="w-full h-96 bg-green-900 justify-center flex items-center flex flex-col" id="postWindow">
+    </div>
+<div class="w-full bg-green-900 p-4" id="commentWindow">
+  <h2 class="text-white font-semibold text-lg mb-2 w-1/2 mx-auto" >Kommentare</h2>
+</div>
+<div class="mt-4 mb-36 w-1/2 mx-auto">
+  <textarea class="w-full h-16 p-2 bg-gray-800 text-white rounded-md" placeholder="Schreibe einen Kommentar..." id="commentTextarea"></textarea>
+  <button class="mt-2 px-4 py-2 bg-white text-green rounded-md hover:bg-green-500" id="postCommentButton">Kommentar posten</button>
+</div>  
+</div>
+</div>
+</body>
+</html>
+  
