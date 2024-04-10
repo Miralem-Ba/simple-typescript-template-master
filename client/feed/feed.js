@@ -50,7 +50,7 @@ const roletest = async () => {
                   <p class="text-white">${allpost[i].post_like}</p>
                   <button class="text-blue-500 hover:underline" name="likeButton" id="${allpost[i].tweet_id}">Like / </button>
                   <button class="text-blue-500 hover:underline" name="dislikeButton" id="${allpost[i].tweet_id}">Dislike</button>
-                  <button class="text-gray-500 hover:underline ml-2" name="commentButton" id="${allpost[i].tweet_id}">Comment</button>
+                  <button class="text-blue-500 hover:underline ml-2" name="commentButton" id="${allpost[i].tweet_id}">Comment</button>
                   <button class="text-red-500 hover:underline ml-2" name="deleteButton" id="${allpost[i].tweet_id}">Delete</button>
               </div>
           </div>
@@ -67,7 +67,7 @@ const roletest = async () => {
                   <p class="text-white">${allpost[i].post_like}</p>
                   <button class="text-blue-500 hover:underline" name="likeButton" id="${allpost[i].tweet_id}">Like / </button>
                   <button class="text-blue-500 hover:underline" name="dislikeButton" id="${allpost[i].tweet_id}">Dislike</button>
-                  <button class="text-gray-500 hover:underline ml-2" name="commentButton" id="${allpost[i].tweet_id}">Comment</button>
+                  <button class="text-blue-500 hover:underline ml-2" name="commentButton" id="${allpost[i].tweet_id}">Comment</button>
               </div>
           </div>
           `;
