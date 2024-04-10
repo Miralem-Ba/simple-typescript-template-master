@@ -142,7 +142,7 @@ export class API {
       );
   
       if (userExists.length > 0) {
-        const token = jwt.sign({ data: 'some data' }, 'your-secret-key');
+        const token = jwt.sign({ username: LoginUsername }, process.env.TOKEN_SECRET || '', { expiresIn: '1h' });
         res.status(200).json({ token: token });
       } else {
         res.status(404).send('Benutzer nicht gefunden');

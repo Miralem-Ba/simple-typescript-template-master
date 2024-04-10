@@ -29,7 +29,8 @@ export class Permission {
                 console.error('Rolleninformation nicht gefunden');
                 return false;
               }
-              
+            
+
         } else {
             return false;
         }
