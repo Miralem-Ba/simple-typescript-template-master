@@ -32,5 +32,7 @@
     "vite-express": "^0.5.1",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-node": "^3.0.2"
-  }
+  },
+  "author": "",
+  "description": ""
 }

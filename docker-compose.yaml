@@ -13,7 +13,7 @@ services:
       - MYSQL_USER=minitwitter
       - MYSQL_PASSWORD=supersecret123
     ports:
-      - 3307:3306
+      - 3306:3306
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin

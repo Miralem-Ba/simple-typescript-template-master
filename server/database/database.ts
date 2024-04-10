@@ -12,7 +12,7 @@ export class Database {
       host: 'localhost',
       user:  'minitwitter',
       password:  'supersecret123',
-      port:33061,
+      port:3306,
       connectionLimit: 5,
     })
     this.initializeDBSchema()
