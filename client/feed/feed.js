@@ -83,12 +83,6 @@ const roletest = async () => {
     };
     showTweets();
   
-  
-  
-  
-  
-    
-  
     document.getElementById('postButton').addEventListener('click', async (event) => {
       event.preventDefault();
       const postMessage = document.getElementById('postTextarea').value;
@@ -110,12 +104,6 @@ const roletest = async () => {
         console.error('Netzwerkfehler:', error);
       }
     });
-  
-  
-  
-  
-  
-  
   
     document.getElementById('Feedwindow').addEventListener('click', async (event) => {
       const { target } = event;
@@ -177,12 +165,12 @@ const roletest = async () => {
         }
       }
   
-  
       else if (target.getAttribute('name') === 'commentButton') {
         const postId = target.id;
         const register = 'comment/comment.html';
         window.location.href = `/${register}?postId=${postId}`;
       }
+
     });
   });
   
