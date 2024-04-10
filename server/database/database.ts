@@ -8,10 +8,10 @@ export class Database {
   // Constructor
   constructor() {
     this._pool = mariadb.createPool({
-      database:  'minitwitter',
-      host: 'localhost',
-      user:  'minitwitter',
-      password:  'supersecret123',
+      database: process.env.DB_NAME || 'minitwitter',
+      host: process.env.DB_HOST || 'localhost',
+      user: process.env.DB_USER || 'minitwitter',
+      password: process.env.DB_PASSWORD || 'supersecret123',
       port:3306,
       connectionLimit: 5,
     })
@@ -19,7 +19,7 @@ export class Database {
   }
   // Methods
   private initializeDBSchema = async () => {
-    console.log('Initializing DB schema...')
+    
     await this.executeSQL(USER_TABLE)
     await this.executeSQL(TWEET_TABLE)
     await this.executeSQL(USER_ROLE)
