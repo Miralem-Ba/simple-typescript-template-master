@@ -44,6 +44,7 @@ CREATE TABLE IF NOT EXISTS tweets (
     user_id INT NOT NULL,
     content VARCHAR(255) NOT NULL,
     post_like INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
@@ -56,6 +57,7 @@ CREATE TABLE IF NOT EXISTS comment (
     user_id INT NOT NULL,
     tweet_id INT NOT NULL,
     comment_content VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (tweet_id) REFERENCES tweets(id)
