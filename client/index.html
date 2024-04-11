@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
+    <!-- Definiert den Zeichensatz für das Dokument -->
     <meta charset="UTF-8" />
+    <!-- Ermöglicht oder deaktiviert den Kompatibilitätsansichtsmodus in Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Kontrolliert die Darstellungsweise auf mobilen Geräten -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <!-- Verlinkt eine externe CSS-Datei für das Styling der Seite -->
     <link rel="stylesheet" href="/style.css" />
-    <script src="client.js"></script>
+     <!-- Bindet eine externe JavaScript-Datei ein -->
+    script src="client.js"></script>
+    <!-- Integriert Tailwind CSS über CDN für Utility-first CSS-Styling -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Setzt den Titel der Webseite, der im Browser-Tab angezeigt wird -->
     <title>MiniTwitter</title>
   </head>
   <body class="bg-green-900">
+    <!-- Zentrierter Container für das Anmeldeformular -->
     <div class="justify-center flex items-center flex flex-col">
+      <!-- Überschrift für die Anmeldeseite -->
       <h1 class="text-4xl font-bold text-white">Anmeldung</h1>
+      <!-- Container für das Anmeldeformular mit abgerundeten Ecken und Schatten -->
       <div class="w-80 h-full bg-white rounded-lg m-11 p-4 flex flex-col justify-around">
+        <!-- Das Anmeldeformular selbst -->
         <form id="loginForm" class="flex flex-col space-y-4">
+          <!-- Feld für den Benutzernamen -->
           <label for="loginUsername" class="text-green-700">Benutzername:</label>
           <input class="p-2 rounded border-2 border-black bg-white text-black" type="text" id="loginUsername" required>
           
+          <!-- Feld für das Passwort -->
           <label for="loginPassword" class="text-green-700">Passwort:</label>
           <input class="p-2 rounded border-2 border-black bg-white text-black" type="password" id="loginPassword" required>
       
+          <!-- Schaltfläche zum Einreichen des Anmeldeformulars -->
           <button class="bg-green-500 text-white px-4 py-2 rounded w-auto" type="submit" id="registerButton">Anmelden</button>
+          <!-- Schaltfläche, um zur Registrierungsseite zu navigieren -->
           <button class="bg-green-500 text-white px-4 py-2 rounded w-auto" type="submit" id="registerNavigationButton">Registrirung</button>
         </form>
       </div>

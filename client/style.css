@@ -1,3 +1,4 @@
+/* Setzt die Schriftart für den gesamten Inhalt des Body-Elements */
 body {
   font-family: 'Roboto', sans-serif;
 }

@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Fehler beim Laden des Posts', error);
     }
   };
+  
   showTweet();
 
   document.getElementById('postCommentButton').addEventListener('click', async (event) => {
