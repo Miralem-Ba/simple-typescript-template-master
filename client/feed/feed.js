@@ -170,6 +170,5 @@ const roletest = async () => {
         const register = 'comment/comment.html';
         window.location.href = `/${register}?postId=${postId}`;
       }
-
     });
   });

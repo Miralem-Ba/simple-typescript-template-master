@@ -47,11 +47,8 @@ export class API {
   private adminCheck(req: Request, res: Response) {
     bodyParser.json()(req, res, async () => {
       const { jwtToken } = req.body; // Extrahiert das JWT-Token aus dem Request-Body.
-
       const permission = new Permission(jwtToken);  // Erstellt eine neue Permission-Instanz mit dem gegebenen Token.
-      
       const permissionUser = await permission.checkRolePermissions('deletAllPost');// Überprüft die Berechtigung für 'deletAllPost'.
-      
       res.status(200).json({ permission: permissionUser }); // Gibt das Ergebnis der Berechtigungsüberprüfung zurück.
     });
   }
@@ -107,7 +104,6 @@ export class API {
       await this.database.executeSQL(  // Fügt den neuen Benutzer in die Datenbank ein.
         `INSERT INTO users (username, password, email, role) VALUES ("${username}", "${password}", "${email}", "User")`
       );
-
     });
   }
 
@@ -141,7 +137,6 @@ export class API {
   private checkUser = (req: Request, res: Response) => {
     bodyParser.json()(req, res, async () => {
       const { LoginPassword, LoginUsername } = req.body; // Extrahiert Benutzername und Passwort aus dem Request Body.
-  
       console.log('Benutzerüberprüfung für:', LoginUsername);
   
       // Überprüft, ob ein Benutzer mit den angegebenen Anmeldedaten existiert
