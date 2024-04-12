@@ -82,6 +82,7 @@ const roletest = async () => {
         console.error('Fehler beim Laden der Tweets', error);
       }
     };
+
     showTweets();
   
     document.getElementById('postButton').addEventListener('click', async (event) => { // Event-Listener für den 'Post' Button, um das Formular für neue Posts zu verarbeiten.
