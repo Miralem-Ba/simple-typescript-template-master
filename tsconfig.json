@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "types": ["jest", "node", "@types/jsonwebtoken"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
